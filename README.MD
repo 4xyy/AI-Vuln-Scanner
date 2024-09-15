@@ -34,7 +34,6 @@ Follow the Prompts:
 
 Enter the target URL when prompted to initiate the scanning process.
 Example Workflow:
-
 Starting the Scanner:
 
 AI-Powered Web Application Vulnerability Scanner
