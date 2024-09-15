@@ -1,13 +1,3 @@
-
-                                                                                                    
-                                  AI Vulnerability Scanner
-                                        BY: 4xyy
-
-
-
-
-
-
 A tool that automates the scanning of web applications for common vulnerabilities (like SQL injection, XSS, CSRF) and leverages AI to provide an analysis of the potential impact and suggested remediation steps. This tool aims to be simple to set up and use, targeting penetration testers who need quick, actionable insights without the complexity of larger enterprise solutions.
 
 Automated Scanning for Multiple Vulnerabilities:
