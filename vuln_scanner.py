@@ -45,14 +45,44 @@ def main():
     vulnerabilities = []
 
     # Scanning for SQL Injection
+from scanners.sql_injection import scan_sql_injection  # Existing module
+from scanners.xss import scan_xss  # Existing module
+from scanners.csrf import scan_csrf  # New CSRF module
+from scanners.ssrf import scan_ssrf  # New SSRF module
+
+def ai_analysis(vulnerabilities):
+    """Placeholder function for AI analysis."""
+    print("\nAI Analysis Report:")
+    for vuln in vulnerabilities:
+        print(f"[AI] Detected {vuln}. Further analysis required.")
+
+def main():
+    print("AI-Powered Web Application Vulnerability Scanner")
+    target_url = input("Enter the target URL: ").strip()
+    vulnerabilities = []
+
+    # Scan for SQL Injection
+    print("\nScanning for SQL Injection...")
     if scan_sql_injection(target_url):
         vulnerabilities.append('SQL Injection')
 
-    # Scanning for XSS
+    # Scan for XSS
+    print("\nScanning for XSS...")
     if scan_xss(target_url):
         vulnerabilities.append('XSS')
 
-    # AI Analysis
+    # Scan for CSRF
+    print("\nScanning for CSRF...")
+    if scan_csrf(target_url):
+        vulnerabilities.append('CSRF')
+
+    # Scan for SSRF
+    print("\nScanning for SSRF...")
+    if scan_ssrf(target_url):
+        vulnerabilities.append('SSRF')
+
+    # AI Analysis of vulnerabilities
+    print("\nRunning AI Analysis...")
     ai_analysis(vulnerabilities)
 
 if __name__ == "__main__":
